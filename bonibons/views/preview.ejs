@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html itemscope itemtype='http://schema.org/WebPage' lang='en' xmlns:og='http://ogp.me/ns#' xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+    <title>Strikingly</title>
+
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <meta content='width=device-width,initial-scale=1.0,user-scalable=yes,minimum-scale=1.0,maximum-scale=3.0' id='viewport' name='viewport'>
+    <link href='https://static-assets.strikinglycdn.com
+    /images/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+    <link rel="stylesheet" media="screen" href="https://static-fonts-css.strikinglycdn.com/css?family=Lobster" />
+    <link rel="stylesheet" media="screen" href="https://static-assets.strikinglycdn.com/application-db74df5dd34561190c56aa304a27f5884438bec1a69b461ff0560ae69c52d7d7.css" />
+    <link rel="stylesheet" media="screen" href="https://static-assets.strikinglycdn.com/show-modes-159006f36cfd697307fbb1e1a9a3e628d957b4e83ebf672b91543130f002e00f.css" />
+    <!-- / without segmentio -->
+    <script>
+        // Create a queue to push events and stub all methods
+        window.analytics || (window.analytics = {});
+        window.analytics_queue || (window.analytics_queue = []);
+
+        function waitForCookie(f) {
+            if (window.$ && window.$.cookie) {
+                if (typeof f === 'function') {
+                    f();
+                }
+            } else {
+                setTimeout(waitForCookie, 200, f);
+            }
+        }
+        (function() {
+            var methods = ["identify", "track", "trackLink", "trackForm", "trackClick", "trackSubmit", "page", "pageview", "ab", "alias", "ready", "group", "on", "once", "off"];
+            var factory = function(method) {
+                return function() {
+                    var args = Array.prototype.slice.call(arguments);
+                    args.unshift(method);
+                    analytics_queue.push(args);
+                    return window.analytics;
+                };
+            };
+            for (var i = 0; i < methods.length; i++) {
+                var method = methods[i];
+                window.analytics[method] = factory(method);
+            }
+        })();
+        // Load analytics.js after everything else
+        window.loadAnalyticsJsAndInitialize = function() {
+            analytics.load = function(callback) {
+                var script = document.createElement('script');
+                script.async = true;
+                script.type = 'text/javascript';
+                script.src = 'https://static-assets.strikinglycdn.com/analytics-custom-2.9.1.min-fcfb43eca27d0043345ac39009dde37912832d6aa6fcf08c02b397884ac1eb93.js'
+                if (script.addEventListener) {
+                    script.addEventListener('load', function(e) {
+                        if (typeof callback === 'function') {
+                            callback(e);
+                        }
+                    }, false);
+                } else { // IE8
+                    script.onreadystatechange = function() {
+                        if (this.readyState == 'complete' || this.readyState == 'loaded') {
+                            callback(window.event);
+                        }
+                    };
+                }
+                var firstScript = document.getElementsByTagName('script')[0];
+                firstScript.parentNode.insertBefore(script, firstScript);
+            };
+            analytics.load(function() {
+                const mixpanelOptions = {
+                    loaded(mixpanel) {
+                        waitForCookie(function() {
+                            $('#user_mixpanel_id').val(mixpanel.get_distinct_id())
+                            $.cookie('__landing_mixpanel_id', mixpanel.get_distinct_id(), {
+                                    path: '/'
+                                })
+                                // sync user profile information
+                            mixpanel.people.set({
+                                profile_update_at: new Date()
+                            })
+                        });
+                    },
+                }
+                analytics.initialize({
+                    'Google Analytics': {
+                        "trackingId": "UA-25124444-1",
+                        "domain": "",
+                        "doubleClick": true,
+                        "nonInteraction": true
+                    },
+                    'Google Tag Manager': {
+                        "containerId": "GTM-TMC53WD"
+                    },
+                    'Mixpanel': Object.assign(mixpanelOptions, {
+                        "token": "f6f51c06307c973387d0fb45c03fa953",
+                        "consolidatedPageCalls": false,
+                        "crossSubdomainCookie": true,
+                        "trackCategorizedPages": true,
+                        "trackNamedPages": true
+                    }),
+                    'Bugsnag': {
+                        "apiKey": "663db56d6e8f0609fde271ae2a22620e",
+                        "useSSL": true,
+                        "releaseStage": "production"
+                    },
+                    'Vero': {
+                        "apiKey": "78460d986e623d99cc0309297a38b545b760d3b4"
+                    },
+                });
+                // Loop through the interim analytics queue and reapply the calls to their
+                // proper analytics.js method.
+                while (window.analytics_queue.length > 0) {
+                    var item = window.analytics_queue.shift();
+                    var method = item.shift();
+                    if (analytics[method]) analytics[method].apply(analytics, item);
+                }
+            });
+        }
+        waitForCookie(function() {
+            if (includes('support.strikingly.com')) {
+                return
+            }
+            if ($.cookie('__strk_cookie_eu_visitor') !== 'true' || $.cookie('__is_open_strk_analytics_cookie')) {
+                loadAnalyticsJsAndInitialize();
+            }
+        });
+    </script>
+
+    <script>
+        if (window && window.analytics) {
+            window.analytics.page();
+        }
+    </script>
+
+    <script src="https://static-assets.strikinglycdn.com/detectIE-c385c24313ef0e9e4e7a1e131bf5e59f0fbd468f9f9ef44fd6739ae84ef0c0a4.js" async="async"></script>
+
+</head>
+
+<body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        window.asset_path = function(url) {
+            return url;
+        };
+        window.jQuery || document.write('<script src="https://static-assets.strikinglycdn.com/jquery-f4e2137d267f77818d966e03df031337a38003039d43f15029422ddd171e14c4.js"><\/script>');
+    </script>
+    <script src="https://static-assets.strikinglycdn.com/v4_preview-3a5102d8e4b1f4f17d52c083bd07adb70a66f182044e528260d8eb981b8ed510.js"></script>
+    <link rel="stylesheet" media="screen" href="https://use.typekit.net/gff2pee.css" />
+
+    <div id='strikingly-tooltip-container'></div>
+    <div class='demo-bar'>
+        <div class='header'>
+            <div class='demo-bar-title'>
+                <div class='logo'>
+                    <img src="https://static-assets.strikinglycdn.com/images/editor2/editor-logo-2x.png" alt="Editor logo 2x" width="84" height="22" />
+                </div>
+                <div class='small caps'>Site Preview</div>
+            </div>
+            <div class='nav right fixed-hidden onclick-preview-right'>
+                <input id='onlick-short-link' type='hidden' value='https://oneclick.siteviewtool.com/h64ol'>
+                <ul>
+                    <li>
+                        <a class='share-preview-link' href='#' rel='tooltip' title='Share the preview to anyone (even without a Strikingly account)'>
+                            <div class='fa fa-share' style='color:white'>&nbsp;</div>
+                            Share
+                        </a>
+                    </li>
+                    <li>
+                        <div class='preview-button-section'>
+                            <a class="s-btn preview-button purple screen" rel="tooltip" title="Preview on screen" href="/s/sites/28839477/preview?mode=desktop">
+                                <div class='preview-button-message'>Preview</div>
+                                <div class='icon screen'></div>
+                            </a>
+                            <a class="s-btn preview-button purple tablet" rel="tooltip" title="Preview on tablet" href="/s/sites/28839477/preview?mode=tablet">
+                                <div class='icon tablet'></div>
+                            </a>
+                            <a class="s-btn preview-button purple phone" rel="tooltip" title="Preview on phone" href="/s/sites/28839477/preview?mode=phone">
+                                <div class='icon phone'></div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class='s-btn dark-gray dark-bg no-right-space' href='https://persuasive-freesia-m53mdr.mystrikingly.com/'>View live site</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function() {
+            $(function() {
+                var copyText, showToast, _base;
+                if (typeof(_base = $('[rel="tooltip"]')).tooltip === "function") {
+                    _base.tooltip({
+                        placement: 'bottom',
+                        container: '#strikingly-tooltip-container'
+                    });
+                }
+                $('.share-preview-link').click(function(e) {
+                    var _ref;
+                    e.preventDefault();
+                    $B.ui.openCloseModal($('#share-preview-modal'));
+                    return (_ref = $('#share-preview-modal input.preview-link')[0]) != null ? _ref.select() : void 0;
+                });
+                $('#share-preview-modal a.close').click(function() {
+                    return $B.ui.openCloseModal($('#share-preview-modal'));
+                });
+                showToast = function(text) {
+                    var $toast;
+                    $toast = $('<div class="toast"><i class="fas fa-check"></i> ' + text + '</div>');
+                    $(document.body).append($toast);
+                    $toast.css({
+                        position: 'fixed',
+                        width: '280px',
+                        top: '100px',
+                        left: '50%',
+                        zIndex: '5000',
+                        transform: 'translateX(-50%)',
+                        background: '#E5F4B2',
+                        color: '#759214',
+                        padding: '12px 20px',
+                        borderRadius: '5px',
+                        display: 'none',
+                        fontFamily: 'Arial, sans-serif',
+                        fontSize: '16px',
+                        textAlign: 'center'
+                    });
+                    $toast.fadeIn(400);
+                    return setTimeout(function() {
+                        return $toast.fadeOut(400, function() {
+                            return $toast.remove();
+                        });
+                    }, 3000);
+                };
+                copyText = function(text) {
+                    var tempInput;
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        return navigator.clipboard.writeText(text).then(function() {
+                            showToast("分享链接已复制到剪切版！");
+                            return console.log("复制成功");
+                        }, function(error) {
+                            return console.error('复制失败:', error);
+                        });
+                    } else {
+                        tempInput = document.createElement('input');
+                        tempInput.value = text;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        return document.body.removeChild(tempInput);
+                    }
+                };
+                return $('.copy-share-link').on('click', function() {
+                    return copyText($('#onlick-short-link').val());
+                });
+            });
+
+        }).call(this);
+    </script>
+    <script>
+        const PAGE_JUMP_DELAY = 3000
+        if (window && !window.edit_page) {
+            const Events = {}
+            window.edit_page = {
+                Event: {
+                    subscribe: function(key, func) {
+                        const callbacks = Events[key]
+                        let index = 0
+                        if (!callbacks) {
+                            Events[key] = [func]
+                        } else if (!callbacks.includes(func)) {
+                            index = callbacks.length
+                            callbacks.push(func)
+                        }
+                        return {
+                            key,
+                            func,
+                            index
+                        }
+                    },
+                    unsubscribe: function({
+                        key,
+                        func,
+                        index
+                    }) {
+                        const callbacks = Events[key]
+                        if (callbacks && callbacks.includes(func)) {
+                            callbacks.splice(index, 1)
+                        }
+                    },
+
+                }
+            }
+        }
+        if (window.location.search.includes('isAiSite')) {
+            analytics.ready(() => {
+                let ids = []
+                $('.theme-switcher a').each(function(index, item) {
+                    ids.push($(item).attr('data-id'))
+                })
+
+            })
+        }
+
+        function isSiteCreator() {
+            return $.cookie('is_oneclicker')
+        }
+
+        <!-- function getSiteId(url) {
+        const pathname = url ? new URL(url).pathname : window.location.pathname
+        const match = pathname ? .match(/\/(\d+)\//) || []
+        return match ? .[1]
+        } -->
+
+        function getThemeSelectionId(url) {
+            const search = url ? new URL(url).search : window.location.search
+            const params = new URLSearchParams(search)
+            return params.get('theme_selection_id');
+        }
+
+
+        $('.one-click-site').on('click', () => {
+            if (!isSiteCreator()) {
+                $('.oneclick-contact-info-dialog').show()
+                return;
+            }
+            const siteId = getSiteId()
+            if (siteId) {
+                $.ajax({
+                    url: `${location.origin}/r/v1/one_click/alibaba/clone_sites/${siteId}/approve`,
+                    method: 'POST'
+                }).done((res) => {
+                    if (res.status === 200) {
+                        const params = new URLSearchParams(window.location.search)
+                        const referrer = params.get('refererDomain')
+                        window.location.replace(`${referrer}/s/sites/${res.data.siteId}`)
+                    }
+                })
+            }
+        })
+        $('.ai-builder-site').on('click', function() {
+            const siteId = getSiteId()
+            const $icon = $(this).find('.fa')
+            if (siteId && $icon.hasClass('entypo-pencil')) {
+                $icon.removeClass('entypo-pencil').addClass('fa-spin fa-spinner')
+                $.ajax({
+                        url: `/r/v1/ai/site_builder/sites/${siteId}/claim`,
+                        method: 'POST',
+                        data: {
+                            themeSelectionId: getThemeSelectionId(),
+                        },
+                    })
+                    .done((res) => {
+                        if (res.status === 200) {
+                            const params = new URLSearchParams(window.location.search)
+                            const referrer = params.get('refererDomain')
+                            window.location.replace(`${referrer}/s/sites/${siteId}/edit`)
+                        }
+                    })
+                    .fail(() => {
+                        $icon.removeClass('fa-spin fa-spinner').addClass('entypo-pencil')
+                    })
+            }
+        })
+
+        $('.go-back-btn').on('click', function() {
+            const siteId = getSiteId()
+            const currentStep = 'inSiteStructureStep'
+            const $icon = $(this).find('i')
+            if ($icon.hasClass('entypo-reply')) {
+                $icon.removeClass('entypo-reply').addClass('fa-spin fa-spinner')
+                if (siteId) {
+                    $.ajax({
+                        url: `/r/v1/ai/site_builder/sites/${siteId}/go_back`,
+                        method: 'POST',
+                        data: {
+                            currentStep,
+                        },
+                    }).done((res) => {
+                        if (res.status === 200) {
+                            const params = new URLSearchParams(window.location.search)
+                            const referrer = params.get('refererDomain')
+                            window.location.replace(`${referrer}/s/ai_site_builder`)
+                        }
+                    }).always(() => {
+                        $icon.removeClass('fa-spin fa-spinner').addClass('entypo-reply')
+                    }).fail(() => {
+                        window.alert(I18n.t('js.api.domains.errors.get_zone_failed'))
+                    })
+                }
+            }
+        })
+
+        $(() => {
+            $('.oneclick-theme-switcher-wrap .theme-switcher img').each(function() {
+                const siteId = getSiteId()
+                const $parent = $(this).parent()
+                if (getSiteId($parent.attr('href')) === siteId) {
+                    $parent.addClass('active')
+                }
+            }).tooltip({
+                placement: 'bottom'
+            })
+
+            $('.edit-preview-setting').click(() => {
+                $('.oneclick-share-setting-dialog').show()
+            })
+
+            $('.site-template-switcher-wrapper .refresh-themes .refresh-btn').on('click', () => {
+                const siteId = getSiteId()
+                if (siteId) {
+                    const url = `/r/v1/ai/site_builder/sites/${siteId}/refresh_themes`
+                    $.ajax({
+                        url: url,
+                        method: 'POST',
+                    }).done((res) => {
+                        if (res.status === 200) {
+                            const data = res.data || {}
+                            const list = data.list || []
+                            if (list.length) {
+                                window.location.replace(list[0].url)
+                            }
+                        }
+                    })
+                }
+            })
+        })
+        $('.tablet-screen-one-click-other').on('click', (event) => {
+            $('.oneclick-preview-setting').toggleClass('show')
+            event.stopPropagation();
+        })
+        $('.switcher-title').on('click', (event) => {
+            $('.theme-switcher').toggleClass('show')
+            event.stopPropagation();
+        })
+        $(document).click(function() {
+            $('.oneclick-preview-setting').removeClass('show')
+            $('.theme-switcher').removeClass('show')
+        });
+    </script>
+    <div class='image-share s-page-layer fill'>
+        <div class='s-page-shade fill'></div>
+        <div class='s-page-wrapper'>
+            <div class='s-page-content'>
+                <iframe frameborder='0' id='s-image-share-iframe' marginheight='0' marginwidth='0' src=''></iframe>
+            </div>
+        </div>
+    </div>
+    <div class='s-edit-modal' id='share-preview-modal'>
+        <div class='inner'>
+            <h5>
+                <span class='fa fa-link'>&nbsp;</span>
+                <span>This is your preview link</span>
+            </h5>
+            <br>
+            <div class='s-form-field'>
+                <input class='preview-link' onclick='this.select();' type='text' value='https://persuasive-freesia-m53mdr.mystrikingly.com/i/preview?token=UWdYZ1YrejE4aFdQZUl5c09VSHcwNGxSeDBMNGplOTNGOUFtc3h4SjJ3K1pBaXVyeFptRlQ5SEk1SkRnNHZPYlFlMy9RSW9GR3lRRmRDcCtyN2RrUHg5a2pzMkpkL0JrYUZiQTRVMmNWcGc9LS1QQSt3d1FIdlBIZTY1V1YyTGdkNDFBPT0%3D--8cc5daa1df1c3c86c0a46d7cde1329edb338e6c8&amp;without_custom_code=false'>
+            </div>
+            <p>For privacy concerns, this link will expire in 10 days. Tell your friends to check it out soon!</p>
+            <br>
+            <a class='s-btn green close no-margin'>Done</a>
+        </div>
+    </div>
+    <div data-names='oneClickSiteDialog' id='share-dialog'></div>
+    <div data-names='oneclickShareSettingDialog' id='oneclick-share-setting-dialog'></div>
+    <div data-names='oneclickContactInfoDialog' id='oneclick-contact-info-dialog-container'></div>
+    <script src="https://static-assets.strikinglycdn.com/webpack/app-dll.e9c6cdab8e8fb3f3883f.js"></script>
+    <script src="https://static-assets.strikinglycdn.com/webpack/shareDialog-app-bundle.3284464912ad9ba3882d.js"></script>
+    <script src="https://static-assets.strikinglycdn.com/webpack/webpack_bridge-app-bundle.5ad8fb074a038dc04d87.js"></script>
+
+    <script>
+        (function() {
+            $(function() {
+                var currentView, previewBar, switchToView;
+                $('body, html').addClass('strikingly-preview-frame');
+                $('.preview-qr-button').click(function() {
+                    return $(this).toggleClass('full');
+                });
+                if ($.browser.webkit && $('iframe.phone').length) {
+                    $('iframe.phone').attr('width', '320');
+                }
+                currentView = 'screen';
+                $('.preview-button.screen').addClass('selected');
+                $('.preview-qr-button').addClass('hidden');
+                switchToView = function(view) {
+                    $('.preview-background').fadeOut();
+                    $('.iframe-wrapper').removeClass('screen tablet phone').addClass(view);
+                    $('.preview-frame').removeClass('screen tablet phone').addClass(view);
+                    $('.back-to-edit').removeClass('screen tablet phone').addClass(view);
+                    $('.preview-button').removeClass('selected');
+                    $('.preview-button.' + view).addClass('selected');
+                    if (view === 'screen') {
+                        $('.preview-qr-button').addClass('hidden');
+                    } else {
+                        setTimeout((function() {
+                            $('.preview-background.' + view).fadeIn();
+                            return $('.preview-qr-button').removeClass('hidden');
+                        }), 500);
+                    }
+                    return currentView = view;
+                };
+                $('.preview-button').click(function(e) {
+                    var err, view, _i, _len, _ref, _ref1, _ref2, _results;
+                    e.preventDefault();
+                    _ref = ['screen', 'tablet', 'phone'];
+                    _results = [];
+                    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                        view = _ref[_i];
+                        if ($(this).hasClass(view) && currentView !== view) {
+                            switchToView(view);
+                            $.cookie("__strk_suppress_preview_tooltip", "1", {
+                                expires: 120,
+                                path: '/'
+                            });
+                            try {
+                                if ((_ref1 = $('.iframe-wrapper iframe')[0].contentWindow.edit_page) != null) {
+                                    _ref1.Event.publish('Site.recalculateLayout');
+                                }
+                                if ((_ref2 = $('.iframe-wrapper iframe')[0].contentWindow.edit_page) != null) {
+                                    _ref2.previewMode = view;
+                                }
+                            } catch (_error) {
+                                err = _error;
+                            }
+                            break;
+                        } else {
+                            _results.push(void 0);
+                        }
+                    }
+                    return _results;
+                });
+                if ('screen' === 'mobile') {
+                    switchToView('phone');
+                }
+                $('.demo-bar a.refresh').click(function(e) {
+                    var _ref, _ref1;
+                    e.preventDefault();
+                    return (_ref = $('.iframe-wrapper iframe')) != null ? (_ref1 = _ref[0]) != null ? _ref1.contentWindow.location.reload() : void 0 : void 0;
+                });
+                if (!$.cookie("__strk_suppress_preview_tooltip")) {
+                    previewBar = $('.preview-button-section');
+                    setTimeout(function() {
+                        previewBar.tooltip('show');
+                        return previewBar.hover(function(e) {
+                            return previewBar.tooltip('hide');
+                        });
+                    }, 1000);
+                }
+                return new QRCode($('.preview-qr-button .code')[0], {
+                    text: 'https://persuasive-freesia-m53mdr.mystrikingly.com/',
+                    width: 200,
+                    height: 200,
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            });
+
+        }).call(this);
+    </script>
+    <style>
+        .preview-qr-button .code {
+            padding: 12%;
+            box-sizing: border-box;
+            background: #fff;
+        }
+    </style>
+    <div class='preview-frame screen'>
+        <div class='preview-background tablet device-demo hidden'>
+            <div class='demo-top'>
+                <div class='center-circle'></div>
+            </div>
+            <div class='tablet-screen'></div>
+            <div class='demo-bottom'></div>
+        </div>
+        <div class='preview-background phone device-demo hidden'>
+            <div class='demo-top'>
+                <div class='left-circle'></div>
+                <div class='right-line'></div>
+            </div>
+            <div class='phone-screen'></div>
+            <div class='demo-bottom'></div>
+        </div>
+        <div class='iframe-wrapper screen'>
+            <iframe class='screen' height='100%' id='preview-iframe' src='https://persuasive-freesia-m53mdr.mystrikingly.com/i/preview?mode=iframe&amp;token=MDhsUVhLZmtSYjkzSVhESmlFMzB2dUI1R0c3K1JrcFBRMDJTNmlxZHAzREM3c0ltUUY3TDNPMGFaM21nTmN2d0pKYkR5L0ZCRllmdG40UVYwNmRKR1Q2a2FjNG0xQnROaE80cEdpZVFwYkU9LS14OXNCSnQ5ZnlHaHNqK3VJS3pUUUxnPT0%3D--99f2f7b8a65e95bb0007977833216ccb282f0cad&amp;v4=1'
+                width='100%'></iframe>
+        </div>
+        <div class='iframe-ghost screen'></div>
+        <div class='preview-qr-button hidden'>
+            <div class='code' style='max-width: 100%;'></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
